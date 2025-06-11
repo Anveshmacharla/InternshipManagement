@@ -1,7 +1,7 @@
 # internship-management
 An end-to-end web application for managing student internships, developed using Flask, MySQL, and Bootstrap. This system supports student registration, internship applications, grading, report generation, and admin domain management.
 
-Features
+# Features
 Student Registration & Login
 Internship Application Submission
 Domain Management by Admin
@@ -10,7 +10,7 @@ Grading System with Feedback
 Report Generation
 Responsive UI with HTML, CSS, JS, and Bootstrap
 
-Tech Stack
+# Tech Stack
 Layer	Technologies Used
 Frontend	HTML, CSS, Bootstrap, JavaScript
 Backend	Python, Flask, Flask-Migrate
@@ -18,7 +18,7 @@ Database	MySQL + SQLAlchemy ORM
 Tools	Alembic (migrations), Jinja2 (templating)
 Deployment	Localhost (development)
 
-Folder Structure
+# Folder Structure
 
 internship-management/
 │
@@ -38,10 +38,7 @@ internship-management/
 Setup Instructions
 Clone the Repository
 
-git clone https://github.com/your-username/internship-management.git
-cd internship-management
 Install Requirements
-
 pip install -r requirements.txt
 Configure MySQL DB
 Update your credentials in config.py.
