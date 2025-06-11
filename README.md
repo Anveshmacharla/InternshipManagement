@@ -2,7 +2,9 @@
 An end-to-end web application for managing student internships, developed using Flask, MySQL, and Bootstrap. This system supports student registration, internship applications, grading, report generation, and admin domain management.
 
 # Features
+
 Student Registration & Login
+
 Internship Application Submission
 Domain Management by Admin
 Internship Approval Workflow
