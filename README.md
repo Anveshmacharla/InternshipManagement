@@ -1,42 +1,43 @@
-# Secure Offer Letter Portal
-A secure web application to manage and generate offer letters for students. Built using Flask, JWT Authentication, MySQL, and Bootstrap, this system provides a protected login system, student registration, and a personalized dashboard displaying user-specific offer letter details.
+# Internship Management System
+A complete web application to manage student internships, built with Flask, MySQL, and Bootstrap. It includes modules for registration, internship applications, admin approvals, grading, and report generation.
 
 # Features
-Student Registration & Login (with JWT Auth)
+Student Registration & Login
 
-Secure Token-Based Authentication
+Internship Application Submission
 
-Offer Letter Management (extendable)
+Admin Domain Management
 
-Error Handling and Redirects
+Internship Approval Workflow
 
-Responsive UI with Bootstrap 5
+Grading System with Feedback
+
+Report Generation
+
+Responsive Design using HTML, CSS, JavaScript, and Bootstrap
 
 # Tech Stack
+
 Layer	Technologies Used
 
 Frontend	HTML, CSS, JavaScript, Bootstrap
 
-Backend	Python, Flask, Flask-JWT-Extended
+Backend	Python, Flask, Flask-Migrate
 
 Database	MySQL, SQLAlchemy ORM
 
-Utilities	Alembic (migrations), Jinja2 (templates), LocalStorage (token storage in browser)
+Utilities	Alembic (migrations), Jinja2 (templating)
 
 Deployment	Localhost (development)
 
-# Setup Instructions
-
-Install Dependencies:
+# Install Dependencies
 
 pip install -r requirements.txt
 
 Configure the Database
+Open config.py
 
-Edit the config.py file:
-
-SQLALCHEMY_DATABASE_URI = 'mysql+pymysql://<username>:<password>@localhost/<database_name>'
-Replace <username>, <password>, and <database_name> with your local MySQL credentials.
+Update the MySQL database credentials (username, password, host, db name)
 
 Initialize the Database
 
@@ -48,5 +49,4 @@ flask db upgrade
 
 Run the Application
 
-flask run
 flask run
