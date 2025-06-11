@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+{% block title %}Internship List{% endblock %}
+{% block content %}
+<h2>Internship List</h2>
+<input type="text" id="search" placeholder="Search internships..." class="search-box">
+<table class="styled-table">
+  <thead>
+    <tr><th>Title</th><th>Domain</th><th>Duration</th><th>Status</th></tr>
+  </thead>
+  <tbody>
+    {% for internship in internships %}
+    <tr>
+      <td>{{ internship.title }}</td>
+      <td>{{ internship.domain.name }}</td>
+      <td>{{ internship.start_date }} - {{ internship.end_date }}</td>
+      <td>{{ internship.status }}</td>
+    </tr>
+    {% endfor %}
+  </tbody>
+</table>
+{% endblock %}

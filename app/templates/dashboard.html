@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+{% block title %}Dashboard{% endblock %}
+
+{% block content %}
+  <h2>Dashboard</h2>
+  <p>Welcome to your internship management dashboard.</p>
+
+  <div class="dashboard-options">
+    <a href="{{ url_for('main.profile') }}" class="btn">👤 Your Profile</a>
+    <a href="{{ url_for('main.internship_form') }}" class="btn">📝 Internship Form</a>
+    <a href="{{ url_for('main.internship_list') }}" class="btn">📋 Internship List</a>
+    <a href="{{ url_for('main.grade') }}" class="btn">🎓 Grades</a>
+    <a href="{{ url_for('main.reports') }}" class="btn">📊 Reports</a>
+    <a href="{{ url_for('main.domain_management') }}" class="btn">🗂️ Domain Management</a>
+    <a href="{{ url_for('main.duration_configuration') }}" class="btn">⏱️ Duration Config</a>
+
+    {% if user.role == 'admin' %}
+      <a href="{{ url_for('main.admin_panel') }}" class="btn">🛠️ Admin Panel</a>
+    {% endif %}
+  </div>
+{% endblock %}

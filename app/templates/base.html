@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{% block title %}Internship Portal{% endblock %}</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+  <script src="{{ url_for('static', filename='main.js') }}" defer></script>
+  {% block head %}{% endblock %}
+</head>
+<body>
+  <header class="site-header">
+    <div class="container">
+      <h1 class="site-title">Internship Management System</h1>
+      {% block nav %}{% endblock %}
+    </div>
+  </header>
+
+  <main class="site-main container">
+    {% block content %}{% endblock %}
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>&copy; 2025 Internship Portal</p>
+    </div>
+  </footer>
+</body>
+</html>

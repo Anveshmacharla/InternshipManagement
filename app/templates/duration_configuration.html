@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+{% block title %}Configure Duration{% endblock %}
+{% block content %}
+<h2>Configure Duration Rules</h2>
+<form action="/config/duration" method="POST" class="form-card">
+  <label>Domain:
+    <select name="domain_id" required>
+      {% for domain in domains %}
+      <option value="{{ domain.id }}">{{ domain.name }}</option>
+      {% endfor %}
+    </select>
+  </label>
+  <input type="number" name="min_days" placeholder="Min Days" required>
+  <input type="number" name="max_days" placeholder="Max Days" required>
+  <button type="submit">Save</button>
+</form>
+{% endblock %}

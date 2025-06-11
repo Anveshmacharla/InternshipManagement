@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+{% block title %}Grade Internships{% endblock %}
+{% block content %}
+<h2>Assign Grades</h2>
+<form action="/grade" method="POST" class="form-container">
+  <label>Select Internship:
+    <select name="internship_id" required>
+      <option value="" disabled selected>Select internship</option>
+      {% for internship in internships %}
+      <option value="{{ internship.id }}">{{ internship.title }}</option>
+      {% endfor %}
+    </select>
+  </label>
+  <label>Grade: <input type="text" name="grade" placeholder="Grade (e.g. A, B)" required></label>
+  <label>Feedback: <textarea name="feedback" placeholder="Feedback" required></textarea></label>
+  <button type="submit">Submit</button>
+</form>
+{% endblock %}

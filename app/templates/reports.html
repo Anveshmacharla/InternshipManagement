@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+{% block title %}Reports{% endblock %}
+{% block content %}
+<h2>Reports</h2>
+<form method="GET" class="form-container">
+  <label>Filter by:
+    <select name="filter">
+      <option value="domain">By Domain</option>
+      <option value="status">By Status</option>
+    </select>
+  </label>
+  <button type="submit">Generate</button>
+</form>
+<div id="report-results" class="report-container">
+  {% if reports %}
+    {% for report in reports %}
+    <div class="report-item">{{ report }}</div>
+    {% endfor %}
+  {% else %}
+    <p>No reports available.</p>
+  {% endif %}
+</div>
+{% endblock %}
